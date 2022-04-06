@@ -1,0 +1,177 @@
+//for loop
+
+//Program 6.23
+
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    print(i);
+  }
+}
+
+
+//Program 6.24
+
+void main() {
+  int sum = 1;
+  for (int i = 1; i <= 10; i = i + 2) {
+    sum = sum * i;
+  }
+  print(sum);
+}
+
+//Program 6.25
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter number for table:');
+  String num1Str = stdin.readLineSync()!;
+  int num1 = int.parse(num1Str);
+
+  stdout.write('Enter length of table:');
+  String num2Str = stdin.readLineSync()!;
+  int num2 = int.parse(num2Str);
+
+  for (int i = 1; i <= num2; i++) {
+    int table = num1 * i;
+    print('$num1 * $i = $table ');
+  }
+}
+
+//Program 6.26
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter postive  number:');
+  String num1Str = stdin.readLineSync()!;
+  int num1 = int.parse(num1Str);
+  int sum = 0;
+  for (int i = 1; i <= num1; i++) {
+    sum = i * i + sum;
+  }
+  print('Sum = $sum');
+}
+
+
+//Program 6.27
+
+void main() {
+  stdout.write('Enter postive  number:');
+  String num1Str = stdin.readLineSync()!;
+  int num1 = int.parse(num1Str);
+  int low = num1 % 10;
+  int high = num1 % 10;
+  int rem;
+
+  for (int i = num1; i <= 1; i / 10) {
+    rem = i % 10;
+    if (rem > high) {
+      high = rem;
+    }
+    if (rem > low) {
+      low = rem;
+    }
+  }
+  print(high);
+  print(low);
+}
+
+//Program 6.28
+
+
+
+
+//Program 6.29
+void main() {
+  for (int i = 1; i <= 40; i = i + 3) {
+    print(i);
+  }
+}
+
+
+//Program 6.30
+
+void main() {
+  int a = 1, i, p, incr = 3;
+  for (i = 1; i <= 40; i++) {
+    if (i % 2 == 0) {
+      p = -a;
+      print(p);
+    } else {
+      print(a);
+      a = a + incr;
+    }
+  }
+}
+
+//Program 6.31
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter Number: ');
+  int num = int.parse(stdin.readLineSync()!);
+
+  int counter = 0;
+  int half = num ~/ 2;
+  int i;
+
+  for (i = 1; i <= half; i++) {
+    if ((num % i) == 0) {
+      counter = counter + i;
+    }
+  }
+
+  if (num == counter) {
+    print('$num is a perfect number');
+  } else {
+    print('$num is not a perfect number');
+  }
+}
+
+
+//Program 6.32
+
+//Program 6.33
+
+import 'dart:io';
+
+void main() {
+  for (int i = 0; i <= 5; i++) {
+    stdout.write('Enter Number: ');
+    int num = int.parse(stdin.readLineSync()!);
+    if (num <= 0) {
+      continue;
+    }
+    print('You Entered: $num');
+  }
+}
+
+//Program 6.34
+
+void main() {
+  int sum = 0;
+  for (int i = 1; i <= 100; i = i + 2) {
+    sum = sum + i;
+  }
+  print('Sum is : $sum');
+}
+
+//Program 6.35
+
+import 'dart:io';
+
+void main() {
+  for (int i = 1; i <= 5; i = i++) {
+    stdout.write('Enter Number');
+    int num = int.parse(stdin.readLineSync()!);
+
+    if (num <= 0) {
+      break;
+    }
+  }
+}
+
+
+
